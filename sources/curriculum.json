@@ -1,0 +1,46 @@
+{
+  "_comment": "The concept map Cartographer seeds into the Ledger. Editable (R9): add/remove/reorder concepts, adjust tier/prereqs/jd. ids are stable keys (align with ledger slugs); prereqs reference ids. jd: role_a | role_b | both | general.",
+  "concepts": [
+    {"id": "llms-what-they-are", "term": "LLMs (what they are)", "tier": 0, "prereqs": [], "jd": "both", "description": "Large language models: software that predicts text and powers chat/AI features."},
+    {"id": "prompting", "term": "Prompting", "tier": 0, "prereqs": [], "jd": "both", "description": "Instructing a model with system vs user prompts."},
+    {"id": "tokens", "term": "Tokens", "tier": 0, "prereqs": [], "jd": "general", "description": "The chunks of text models read and are billed in."},
+
+    {"id": "tokenization", "term": "Tokenization (subwords)", "tier": 1, "prereqs": ["tokens"], "jd": "general", "description": "Why models see subword tokens, not whole words."},
+    {"id": "embeddings", "term": "Embeddings", "tier": 1, "prereqs": ["tokens"], "jd": "both", "description": "Turning content into vectors so meaning becomes distance in space."},
+    {"id": "context-windows", "term": "Context windows", "tier": 1, "prereqs": ["tokens"], "jd": "both", "description": "How much text a model can consider at once."},
+    {"id": "parameters-weights", "term": "Parameters / weights / model size", "tier": 1, "prereqs": ["llms-what-they-are"], "jd": "general", "description": "What '7B / 70B' means and why size matters."},
+    {"id": "training-vs-inference", "term": "Training vs inference", "tier": 1, "prereqs": ["llms-what-they-are"], "jd": "both", "description": "Learning the model vs using it to answer."},
+    {"id": "temperature-sampling", "term": "Temperature & sampling", "tier": 1, "prereqs": ["llms-what-they-are"], "jd": "general", "description": "The dial that controls randomness/creativity of output."},
+    {"id": "transformers-attention", "term": "Transformers & attention (conceptual)", "tier": 1, "prereqs": ["embeddings", "tokens"], "jd": "general", "description": "Why modern models work, at a no-math level."},
+
+    {"id": "pretraining", "term": "Pretraining", "tier": 2, "prereqs": ["training-vs-inference"], "jd": "general", "description": "Learning general language from huge text corpora."},
+    {"id": "fine-tuning", "term": "Fine-tuning", "tier": 2, "prereqs": ["pretraining"], "jd": "both", "description": "Specializing a base model on task/domain data."},
+    {"id": "rlhf-alignment", "term": "RLHF / alignment", "tier": 2, "prereqs": ["fine-tuning"], "jd": "general", "description": "Tuning a model toward human preferences and safety."},
+    {"id": "datasets-data-quality", "term": "Datasets & data quality", "tier": 2, "prereqs": ["training-vs-inference"], "jd": "role_a", "description": "Garbage-in/garbage-out; provenance and labeling."},
+    {"id": "ml-fundamentals-evaluation", "term": "ML fundamentals & evaluation", "tier": 2, "prereqs": ["training-vs-inference"], "jd": "both", "description": "Core ML ideas and how model quality is measured (evals/benchmarks)."},
+    {"id": "hallucination", "term": "Hallucination", "tier": 2, "prereqs": ["training-vs-inference"], "jd": "both", "description": "Why models confidently produce wrong answers."},
+    {"id": "model-families", "term": "Model families & versions", "tier": 2, "prereqs": ["llms-what-they-are"], "jd": "general", "description": "Open vs closed; Claude / GPT / Llama / Gemini lineages."},
+
+    {"id": "rag-retrieval-augmented-generation", "term": "RAG (retrieval-augmented generation)", "tier": 3, "prereqs": ["embeddings", "context-windows"], "jd": "role_a", "description": "Grounding answers in retrieved documents."},
+    {"id": "vector-databases", "term": "Vector databases", "tier": 3, "prereqs": ["embeddings"], "jd": "role_a", "description": "Storing and searching embeddings at scale."},
+    {"id": "semantic-search", "term": "Semantic search", "tier": 3, "prereqs": ["embeddings"], "jd": "role_a", "description": "Search by meaning rather than keywords."},
+    {"id": "tool-use-function-calling", "term": "Tool use / function calling", "tier": 3, "prereqs": ["llms-what-they-are"], "jd": "both", "description": "Letting a model call APIs and functions."},
+    {"id": "ai-agents-agentic-workflows", "term": "AI agents / agentic workflows", "tier": 3, "prereqs": ["tool-use-function-calling"], "jd": "both", "description": "Multi-step, semi-autonomous task execution."},
+    {"id": "multimodal-vision", "term": "Multimodal / vision models", "tier": 3, "prereqs": ["embeddings"], "jd": "role_b", "description": "Text and images in one space (CLIP, image understanding)."},
+    {"id": "structured-output", "term": "Structured output / JSON mode", "tier": 3, "prereqs": ["prompting"], "jd": "both", "description": "Getting reliable machine-readable output from a model."},
+    {"id": "prompt-patterns", "term": "Prompt patterns (few-shot, chain-of-thought)", "tier": 3, "prereqs": ["prompting"], "jd": "both", "description": "Techniques that reliably lift output quality."},
+
+    {"id": "latency-cost-economics", "term": "Latency, cost & token economics", "tier": 4, "prereqs": ["tokens", "training-vs-inference"], "jd": "both", "description": "The tradeoffs shaping every AI feature decision."},
+    {"id": "prompt-vs-rag-vs-finetune", "term": "Prompt vs RAG vs fine-tune", "tier": 4, "prereqs": ["rag-retrieval-augmented-generation", "fine-tuning"], "jd": "both", "description": "The core AI-PM build decision: which approach when."},
+    {"id": "guardrails-safety", "term": "Guardrails / safety / moderation", "tier": 4, "prereqs": ["training-vs-inference"], "jd": "role_a", "description": "Keeping outputs safe and on-policy."},
+    {"id": "evals-in-production", "term": "Evals in production / observability", "tier": 4, "prereqs": ["ml-fundamentals-evaluation"], "jd": "both", "description": "Monitoring model quality after launch."},
+    {"id": "human-in-the-loop", "term": "Human-in-the-loop / escalation", "tier": 4, "prereqs": ["ai-agents-agentic-workflows"], "jd": "both", "description": "When and how to hand off to a person."},
+    {"id": "apis-systems-integration", "term": "APIs & systems integration", "tier": 4, "prereqs": ["tool-use-function-calling"], "jd": "role_a", "description": "Wiring models into real systems and services."},
+    {"id": "privacy-pii", "term": "Privacy / PII / data handling", "tier": 4, "prereqs": ["datasets-data-quality"], "jd": "role_a", "description": "Compliance and data protection in AI systems."},
+
+    {"id": "scaling-laws", "term": "Scaling laws", "tier": 5, "prereqs": ["training-vs-inference"], "jd": "general", "description": "Why more compute/data tends to yield better models."},
+    {"id": "long-context-tradeoffs", "term": "Long-context tradeoffs", "tier": 5, "prereqs": ["context-windows"], "jd": "general", "description": "Costs and limits of very large context windows."},
+    {"id": "reasoning-models", "term": "Reasoning models / test-time compute", "tier": 5, "prereqs": ["training-vs-inference"], "jd": "general", "description": "Models that 'think' longer before answering."},
+    {"id": "ai-governance", "term": "AI governance / export controls", "tier": 5, "prereqs": ["llms-what-they-are"], "jd": "general", "description": "Non-technical levers (regulation, export controls) that gate deployment."}
+  ]
+}

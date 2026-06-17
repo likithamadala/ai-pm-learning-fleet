@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>AI Learning Fleet — feed sources</title>
+  </head>
+  <body>
+    <outline text="AI blogs &amp; newsletters">
+      <outline text="Simon Willison" type="rss" xmlUrl="https://simonwillison.net/atom/everything/"/>
+      <outline text="Hugging Face Blog" type="rss" xmlUrl="https://huggingface.co/blog/feed.xml"/>
+      <outline text="Latent Space" type="rss" xmlUrl="https://www.latent.space/feed"/>
+      <outline text="Import AI (Jack Clark)" type="rss" xmlUrl="https://importai.substack.com/feed"/>
+      <outline text="The Batch (DeepLearning.AI)" type="rss" xmlUrl="https://www.deeplearning.ai/the-batch/feed/"/>
+    </outline>
+  </body>
+</opml>

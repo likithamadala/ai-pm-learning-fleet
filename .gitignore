@@ -1,0 +1,27 @@
+# Secrets - never commit
+.env
+*.env
+*token*
+*secret*
+*.xml
+
+# Personal / runtime learning data - regenerate locally with: python scripts/cartographer.py seed
+ledger/concepts.jsonl
+ledger/feedback.jsonl
+ledger/processed.jsonl
+ledger/streak.json
+
+# Personal daily output
+briefs/*.md
+!briefs/.gitkeep
+jds/*
+!jds/.gitkeep
+runs/*
+!runs/.gitkeep
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
