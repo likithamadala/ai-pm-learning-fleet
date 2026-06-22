@@ -6,7 +6,7 @@
 
 Most "I'm learning AI" projects are a folder of bookmarks nobody reopens. This is a *system* instead — it closes the loop instead of just growing the pile.
 
-It was built by a product manager, on [Claude Code](https://www.anthropic.com/claude-code) (Anthropic's AI coding tool), to get from *"I can follow AI headlines"* to *"I can reason about AI products."* It's also working proof of that journey.
+It was built by a product manager, on [Claude Code](https://www.anthropic.com/claude-code) — Anthropic's AI coding tool, and the environment the whole fleet runs inside — to get from *"I can follow AI headlines"* to *"I can reason about AI products."* It's also working proof of that journey.
 
 ---
 
