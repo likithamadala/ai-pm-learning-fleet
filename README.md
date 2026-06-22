@@ -2,9 +2,9 @@
 
 **A small team of AI agents that teaches its owner to think like an AI product manager — and runs itself, every day, with no babysitting.**
 
-Most "I'm learning AI" projects are a folder of bookmarks nobody reopens.
+**In plain terms:** it's a set of small AI programs that run on a computer. Every morning they send a short, personalized AI lesson. They remember what you've already learned, so the lessons get smarter over time. ("Agents" just means programs that act on their own; "fleet" is the team of them working together.)
 
-This is a *system* instead. A handful of cooperating agents figure out **what** you should learn, teach it **at your level**, make sure it **sticks**, and keep you **current** — automatically.
+Most "I'm learning AI" projects are a folder of bookmarks nobody reopens. This is a *system* instead — it closes the loop instead of just growing the pile.
 
 It was built by a product manager, on [Claude Code](https://www.anthropic.com/claude-code), to get from *"I can follow AI headlines"* to *"I can reason about AI products."* It's also working proof of that journey.
 
@@ -46,7 +46,7 @@ No single agent is the point. They **compound**. The more you use it, the more i
 
 ## Why it's different
 
-**A system, not a reading list.** It decides what's next, teaches it, and checks you retained it. The loop closes instead of just growing a pile.
+**A system, not a reading list.** It picks what's next, teaches it, then checks you actually remembered it. Nothing just piles up unread.
 
 **It learns about you.** Every session updates a shared memory of what you understand. Explanations stop repeating what you already know and focus on your real gaps.
 
