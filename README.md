@@ -6,7 +6,7 @@
 
 Most "I'm learning AI" projects are a folder of bookmarks nobody reopens. This is a *system* instead — it closes the loop instead of just growing the pile.
 
-It was built by a product manager, on [Claude Code](https://www.anthropic.com/claude-code), to get from *"I can follow AI headlines"* to *"I can reason about AI products."* It's also working proof of that journey.
+It was built by a product manager, on [Claude Code](https://www.anthropic.com/claude-code) (Anthropic's AI coding tool), to get from *"I can follow AI headlines"* to *"I can reason about AI products."* It's also working proof of that journey.
 
 ---
 
@@ -21,7 +21,7 @@ The Fleet closes both gaps — deliberately, and with as little willpower as pos
 
 ## The fleet
 
-Each agent does one job. They all share one memory: the **Knowledge Ledger**, a running model of what you know.
+Each agent does one job. They all share one memory: the **Knowledge Ledger** — a plain text file that tracks what you know and how well you know it.
 
 | Agent | What it does |
 |---|---|
@@ -62,7 +62,7 @@ No single agent is the point. They **compound**. The more you use it, the more i
 
 Deliberately simple, cheap, and robust:
 
-- **Runs on Claude Code** with a personal subscription. ~$0 marginal cost, no servers, no third-party platforms.
+- **Runs on Claude Code** with a personal subscription. No extra cost per run, no servers, no third-party platforms.
 - **A shared, human-readable memory** (plain JSON / Markdown, version-controlled) tracks each concept's status, your comprehension level, and its review schedule.
 - **Three proven building blocks:** content retrieval (RSS + article extraction), spaced repetition (Leitner scheduling), and safe automation (scheduled runs, file-locked state, graceful per-agent failure handling, nightly auto-commit).
 - **42 automated tests**, self-documenting run logs, and a written requirements + plan history in [`docs/`](docs/).
